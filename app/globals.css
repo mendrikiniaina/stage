@@ -1,6 +1,20 @@
-@import 'bootstrap/dist/css/bootstrap.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+button {
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
 
 :root {
   --background: #ffffff;

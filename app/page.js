@@ -1,16 +1,25 @@
-// app/page.js
-// app/page.js
-import Navbar from './components/Navbar'; // Utilisez 'Navbar' ici
+import Navbar from '../components/Navbar';
+import LoginForm from '../components/auth/LoginForm';
+import Caroussel from '../components/auth/Caroussel';
 
-export default function Home() {
+export default function Page() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
+      {/* Barre de navigation */}
       <Navbar />
-      <main>
-        <h1>Bienvenue sur mon site de réservation</h1>
-        <p>Découvrez nos offres de réservation pour hôtels, vols, et plus encore !</p>
-      </main>
+
+      {/* Contenu principal */}
+      <div className="flex flex-grow">
+        {/* Section gauche */}
+        <div className="w-1/2 bg-pink-500 text-white flex items-center justify-center relative">
+          <Caroussel />
+        </div>
+
+        {/* Section droite */}
+        <div className="w-1/2 bg-white flex items-center justify-center">
+          <LoginForm />
+        </div>
+      </div>
     </div>
   );
 }
-
